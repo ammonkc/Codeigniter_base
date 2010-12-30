@@ -1,0 +1,16 @@
+/******************************************************* 
+*  Codeigniter Base Install                            *
+*                                                      *
+*  Codeigniter_base                                    *
+*  Author: Ammon Casey                                 *
+*  Website: http://www.brokenparadigmlabs.com          *
+*  https://github.com/ammonkc/Codeigniter_base         *
+*  Twitter: @ammonkc                                   *
+*  Date: 12.30.2010                                    *
+*                                                      *
+*  Copyright (c) 2010, Ammon Casey                     *
+********************************************************/
+
+This is the base codeigniter installation that I start a project with.
+It includes many of the common libraries, helpers, assets that I use in
+most projects.

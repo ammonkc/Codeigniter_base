@@ -8,7 +8,7 @@
 <p>The corresponding controller for this page is found at:</p>
 <code>/application/controllers/welcome.php</code>
 
-<p>The inherits MY_Controller in:</p>
+<p>The controllers inherits MY_Controller in:</p>
 <code>/application/libraries/MY_Controller.php</code>
 
 <p>FCPATH:</p>

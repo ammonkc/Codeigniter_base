@@ -35,12 +35,13 @@
 | can also be renamed or relocated anywhere on your server.
 | For more info please see the user guide:
 | http://codeigniter.com/user_guide/general/managing_apps.html
-|
+| 
+| example: "/Library/WebServer/Documents/Codeigniter_base/application"
 |
 | NO TRAILING SLASH!
 |
 */
-	$application_folder = "/Library/WebServer/Documents/Codeigniter_base/application";
+	$application_folder = "../application";
 
 /*
 |===============================================================
@@ -87,7 +88,7 @@ else
 */
 define('EXT', '.php');
 define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-define('FCPATH', __FILE__);
+define('FCPATH', str_replace(SELF, '', __FILE__));
 define('BASEPATH', $system_folder.'/');
 
 if (is_dir($application_folder))

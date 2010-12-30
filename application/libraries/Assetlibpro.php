@@ -250,7 +250,7 @@ class Assetlibpro {
 			$mtimes = array();
 			
 			foreach ($assets as $asset) {
-				$mtimes[] = filemtime(dirname(FCPATH).'/'.trim($asset,'/'));
+				$mtimes[] = filemtime(FCPATH.'/'.trim($asset,'/'));
 			}
 			
 			$assets_hash = md5(implode('',$assets));

@@ -1,4 +1,6 @@
 */application/config/database.php
+*/assets/compressed/js/*
+*/assets/compressed/css/*
 */logs/*
 */ci-1.7.3/logs/log-*.php
 */ci-1.7.3/cache/*

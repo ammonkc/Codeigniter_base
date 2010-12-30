@@ -1,0 +1,13 @@
+# Basic Rewrite rule for index.php
+# RewriteEngine on
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+# Rewrite with folder protection
+
+RewriteEngine On
+RewriteRule ^(application|ci-1.7.3|logs) - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php/$0 [PT,L]

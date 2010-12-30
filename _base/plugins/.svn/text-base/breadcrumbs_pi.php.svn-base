@@ -1,0 +1,38 @@
+<?php
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP 4.3.2 or newer
+ *
+ * @package		CodeIgniter
+ * @author		ExpressionEngine Dev Team
+ * @copyright	Copyright (c) 2006, EllisLab, Inc.
+ * @license		http://codeigniter.com/user_guide/license.html
+ * @link		http://codeigniter.com
+ * @since		Version 1.0
+ * @filesource
+ */
+
+// ------------------------------------------------------------------------
+
+/**
+ * Breadcrumbs
+ *
+ * @access	public
+ * @param	array	Additional attributes
+ * return a string containing the sidebar box
+ */
+function breadcrumbs($bread=array()) {
+	$crumbs = '';
+	if ( is_array($bread) AND count($bread) > 0 ) {
+		$crumbs .= '<ol id="breadcrumbs">';
+		foreach( $bread as $key => $value ) {
+			$crumbs .= '<li>'.$value.'</li>';
+		}//END - loop
+		$crumbs .= '</ol>';
+	}
+	return $crumbs;
+}
+// ------------------------------------------------------------------------
+?>

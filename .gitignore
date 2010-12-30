@@ -1,0 +1,3 @@
+*/ci-1.7.3/logs/log-*.php
+*/ci-1.7.3/cache/*
+*/ci-1.7.3/cache/!index.html

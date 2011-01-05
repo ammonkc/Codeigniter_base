@@ -8,19 +8,19 @@
         <title><?=$yield_page_title;?></title>
         
         <?php
-            echo '<script src="'.base_url().'assets/javascript/modernizr-1.5.min.js" type="text/javascript"></script>';            
-            echo '<!--[if lt IE 9]><script src="'.base_url().'assets/javascript/ie/html5.js"></script><![endif]-->';
+            echo '<script src="'.base_url().'assets/javascript/modernizr-1.6.min.js" type="text/javascript"></script>';
             echo '<link href="'.base_url().'assets/css/styles.css" rel="stylesheet" media="screen" type="text/css" />';
             echo '<link rel="stylesheet" type="text/css" media="print" href="'.base_url().'assets/css/print.css" />';
             echo $this->assetlibpro->output('css');
             echo $this->assetlibpro->output('js');
             echo '<!--[if lt IE 7]><script src="'.base_url().'assets/javascript/ie/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script><![endif]-->';
-            echo '<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="'.base_url().'assets/css/ie/ie6.css"/><![endif]-->';
-            echo '<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="'.base_url().'assets/css/ie/ie7.css"/><![endif]-->'; 
-            echo '<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="'.base_url().'assets/css/ie/ie8.css"/><![endif]-->';            
-            echo '<!--[if IE 6]><script src="'.base_url().'assets/javascript/ie/IE-6.js"></script><![endif]-->';
-            echo '<!--[if IE 7]><script src="'.base_url().'assets/javascript/ie/IE-7.js"></script><![endif]-->';
-            echo '<!--[if IE 8]><script src="'.base_url().'assets/javascript/ie/IE-8.js"></script><![endif]-->';
+            echo '<!--[if lte IE 7]><script src="'.base_url().'assets/javascript/ie/DD_roundies_0.0.2a-min.js" type="text/javascript"></script><![endif]-->';
+            echo '<!--[if IE 6]><link href="'.base_url().'assets/css/ie/ie6.css" rel="stylesheet" type="text/css" media="all"/><![endif]-->';
+            echo '<!--[if IE 7]><link href="'.base_url().'assets/css/ie/ie7.css" rel="stylesheet" type="text/css" media="all"/><![endif]-->'; 
+            echo '<!--[if IE 8]><link href="'.base_url().'assets/css/ie/ie8.css" rel="stylesheet" type="text/css" media="all"/><![endif]-->';            
+            echo '<!--[if IE 6]><script src="'.base_url().'assets/javascript/ie/IE-6.js" type="text/javascript"></script><![endif]-->';
+            echo '<!--[if IE 7]><script src="'.base_url().'assets/javascript/ie/IE-7.js" type="text/javascript"></script><![endif]-->';
+            echo '<!--[if IE 8]><script src="'.base_url().'assets/javascript/ie/IE-8.js" type="text/javascript"></script><![endif]-->';
             echo $yield_head_block;
         ?>
     </head>

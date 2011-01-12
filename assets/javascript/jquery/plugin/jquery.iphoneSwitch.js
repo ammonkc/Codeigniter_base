@@ -1,5 +1,5 @@
 /******************************************************* 
-*  jQuery iphoneSwitch plugin v0.8.8                   *
+*  jQuery iphoneSwitch plugin v0.8.9                   *
 *                                                      *
 *  jquery.iphoneSwitch.js                              *
 *  Author: Ammon Casey                                 *
@@ -17,41 +17,41 @@
     
     	var state = start_state == 'on' ? start_state : 'off';
     	
-    	// define default settings
-    	var settings = {
-    	    track_class: 'track',
-    	    handle_class: 'handle',
-    	    label_class: 'label',
-    		mouse_over: 'pointer',
-    		mouse_out:  'default',
-    		hide_checkbox: true,
-    		sync_checkbox: true,
-    		use_images: true,
-    		speed: '250',
-    		on_label: 'On',
-    		off_label: 'Off',
-    		switch_height: 28,
-    		switch_width: 93,
-    		switch_radius: 4,
-    		track_img: '/assets/javascript/jquery/theme/iphoneSwitch/images/switch_track.png',
-    		track_bg_color: '#5f6777',
-    		track_width: 93,
-    		track_height: 27,
-    		track_padding: 0,
-    		track_dropshadow_color: 'rgba(255, 255, 255, 0.15)',
-    		handle_img: '/assets/javascript/jquery/theme/iphoneSwitch/images/switch_handle.png',
-    		handle_bg_color: '#f9f9f9',
-    		handle_border_color: '#d0d0d0',
-    		handle_height: 25,
-    		handle_width: 40,
-    		label_color: "#ffffff",
-    		label_font_size: 12
-    	};
+        // define default settings
+        var settings = {
+            track_class            : 'track',
+            handle_class           : 'handle',
+            label_class            : 'label',
+        	mouse_over             : 'pointer',
+        	mouse_out              :  'default',
+        	hide_checkbox          : true,
+        	sync_checkbox          : true,
+        	use_images             : true,
+        	speed                  : '250',
+        	on_label               : 'On',
+        	off_label              : 'Off',
+        	switch_height          : 28,
+        	switch_width           : 93,
+        	switch_radius          : 4,
+        	track_img              : '/assets/javascript/jquery/theme/iphoneSwitch/images/switch_track.png',
+        	track_bg_color         : '#5f6777',
+        	track_width            : 93,
+        	track_height           : 27,
+        	track_padding          : 0,
+        	track_dropshadow_color : 'rgba(255, 255, 255, 0.15)',
+        	handle_img             : '/assets/javascript/jquery/theme/iphoneSwitch/images/switch_handle.png',
+        	handle_bg_color        : '#f9f9f9',
+        	handle_border_color    : '#d0d0d0',
+        	handle_height          : 25,
+        	handle_width           : 40,
+        	label_color            : "#ffffff",
+        	label_font_size        : 12
+        };
     
     	if(options) {
     		jQuery.extend(settings, options);
     	}
-        
+    
     	// create the switch
     	return this.each(function() {
     		var checkbox = jQuery(this);
@@ -60,19 +60,19 @@
     		var container;
     		var track;
     		var handle;
-    		var track_padding;
+			var track_padding;
     		
     		// Hide the checkbox
     		if (settings.hide_checkbox) {checkbox.hide();}
     		
     		// sync checkbox state with switch state
-    		if (settings.sync_checkbox) {state = checkbox.attr('checked') == true ? 'on' : 'off';}
+    		if (settings.sync_checkbox) {state = checkbox.attr('checked') == true ? 'on' : 'off';}    		
     		
     		// use images 
     		if (settings.use_images) {
     			track_bg = 'url('+settings.track_img+')';
     			handle_bg = 'url('+settings.handle_img+')';
-    			track_padding = settings.track_padding;
+				track_padding = settings.track_padding;
     		}else{
     			track_bg = settings.track_bg_color;
     			handle_bg = settings.handle_bg_color;
@@ -192,31 +192,33 @@
     		
     		// click handling
     		jQuery(mySwitch).find('.' + settings.handle_class).click(function() {
-    		    var cb = jQuery(this).parent().parent().find('input[type="checkbox"]');
+    		    var cb = jQuery(this).parent().parent().find('input:checkbox');
     		    var checked_state = cb.attr('checked') == true ? 'on' : 'off';
     			if(checked_state == 'on') {
-    				jQuery(this).animate({left: track_padding,right: offset}, settings.speed, function() {
-    					if (typeof switched_off_callback == 'function')
-    					{
-    					    switched_off_callback.call(this);
-    					}
-    				});
+    				slide_handle(jQuery(this), track_padding, offset, settings.speed, switched_off_callback);
     				cb.attr('checked',false)
-    				        .trigger('change');
+    				  .trigger('change');
     				checked_state = 'off';
     			}else {
-    				jQuery(this).animate({left: offset,right: track_padding}, settings.speed, function() {
-    					if (typeof switched_on_callback == 'function')
-    					{
-    					    switched_on_callback.call(this);
-    					}
-    				});
+    				slide_handle(jQuery(this), offset, track_padding, settings.speed, switched_on_callback);
     				cb.attr('checked',true)
-    				        .trigger('change');
+    				  .trigger('change');
     				checked_state = 'on';
     			}
-    		});		
+    		});//- END .click()
     
-    	});	
+    	});//- END .each()
+    }//- END $.fn.iphoneSwitch()
+    
+    /*** Private functions ***/
+    function slide_handle(handle, left_pos, right_pos, speed, switch_callback)
+    {
+        jQuery(handle).animate({left: left_pos,right: right_pos}, speed, function() {
+        	if (typeof switch_callback == 'function')
+        	{
+        	    switch_callback.call(this);
+        	}
+        });
     }
+    
 })(jQuery);

@@ -39,7 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'ion_auth', 'session', 'user_agent');
+$autoload['libraries'] = array('database', 'session', 'user_agent');
 
 
 /*

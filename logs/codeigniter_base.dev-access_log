@@ -71,3 +71,12 @@
 127.0.0.1 - - [30/Dec/2010:11:23:18 -1000] "GET /assets/css/print.css HTTP/1.1" 200 39
 127.0.0.1 - - [30/Dec/2010:11:23:18 -1000] "GET /assets/compressed/js/js_default_adf7971e_2359bbe0_909a3067.php HTTP/1.1" 200 29465
 127.0.0.1 - - [30/Dec/2010:11:23:18 -1000] "GET /assets/javascript/modernizr-1.5.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/Jan/2011:13:59:43 -1000] "GET / HTTP/1.1" 500 14680
+127.0.0.1 - - [13/Jan/2011:14:19:27 -1000] "GET /welcome HTTP/1.1" 500 16684
+127.0.0.1 - - [13/Jan/2011:14:19:31 -1000] "GET / HTTP/1.1" 500 16264
+127.0.0.1 - - [13/Jan/2011:15:08:39 -1000] "GET / HTTP/1.1" 500 16264
+127.0.0.1 - - [13/Jan/2011:15:10:38 -1000] "GET / HTTP/1.1" 200 1313
+127.0.0.1 - - [13/Jan/2011:15:10:38 -1000] "GET /assets/css/print.css HTTP/1.1" 200 39
+127.0.0.1 - - [13/Jan/2011:15:10:38 -1000] "GET /assets/javascript/modernizr-1.6.min.js HTTP/1.1" 200 9563
+127.0.0.1 - - [13/Jan/2011:15:10:38 -1000] "GET /assets/css/styles.css HTTP/1.1" 200 11358
+127.0.0.1 - - [13/Jan/2011:15:10:38 -1000] "GET /assets/compressed/js/js_default_adf7971e_2359bbe0_909a3067.php HTTP/1.1" 200 29465

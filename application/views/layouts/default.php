@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>        
-        <?=$yield_meta;?>
+        <?php echo $yield_meta;?>
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"><![endif]-->
         
-        <link rel="icon" type="image/x-icon" href="<?=base_url();?>assets/images/favicon.ico" />
-        <title><?=$yield_page_title;?></title>
+        <link rel="icon" type="image/x-icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
+        <title><?php echo $yield_page_title;?></title>
         
         <?php
             echo '<script src="'.base_url().'assets/javascript/modernizr-1.6.min.js" type="text/javascript"></script>';
@@ -24,7 +24,7 @@
             echo $yield_head_block;
         ?>
     </head>
-    <body id="<?=$yield_bodyid;?>" class="<?=$yield_user_agent;?>">
-        <?=$yield?>
+    <body id="<?php echo $yield_bodyid;?>" class="<?php echo $yield_user_agent;?>">
+        <?php echo $yield?>
     </body>
 </html>

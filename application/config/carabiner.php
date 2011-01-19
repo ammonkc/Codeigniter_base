@@ -194,6 +194,9 @@ $config['groups']['ie8'] = array(
 
 // iOS
 $config['groups']['ios'] = array(
+                                'js'  => array(
+                                              array('jquery/plugin/jquery.mobile-1.0a2.js', 'jquery/plugin/jquery.mobile-1.0a2.min.js', TRUE, FALSE),
+                                              );
                                 'css' => array(
                                               array('mobile/iphone.css', 'only screen and (max-device-width: 480px)'),
                                               array('mobile/ipad.css', 'only screen and (device-width: 768px)'),

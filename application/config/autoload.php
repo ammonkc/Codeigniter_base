@@ -39,7 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'assetlibpro', 'session', 'user_agent');
+$autoload['libraries'] = array('database', 'carabiner', 'session', 'user_agent');
 
 
 /*
@@ -51,7 +51,7 @@ $autoload['libraries'] = array('database', 'assetlibpro', 'session', 'user_agent
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'html','security');
+$autoload['helper'] = array('url', 'secure_url', 'html', 'security');
 
 
 /*
@@ -79,7 +79,7 @@ $autoload['plugin'] = array();
 |
 */
 
-$autoload['config'] = array('assetlibpro');
+$autoload['config'] = array();
 
 
 /*

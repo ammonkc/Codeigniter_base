@@ -175,7 +175,7 @@
 		// an IE only group
 		$css = array('iefix.css');
 		$js = array('iefix.js');
-		$this->carabiner->group('iefix', array('js'=>$js, 'css'=>$js) );
+		$this->carabiner->group('iefix', array('js'=>$js, 'css'=>$css) );
 		
 		// you can even assign an asset to a group individually 
 		// by passing the group name to the last parameter of the css/js functions

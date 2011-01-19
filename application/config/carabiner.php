@@ -14,7 +14,7 @@
 |
 */
 
-$config['script_dir'] = 'assets/scripts/';
+$config['script_dir'] = 'assets/javascript/';
 
 
 /*
@@ -26,7 +26,7 @@ $config['script_dir'] = 'assets/scripts/';
 |
 */
 
-$config['style_dir'] = 'assets/styles/';
+$config['style_dir'] = 'assets/css/';
 
 /*
 |--------------------------------------------------------------------------
@@ -146,6 +146,61 @@ $config['force_curl'] = FALSE;
 |
 */
 
+// defaults
+$config['groups']['main'] = array(
+                                    'js'  => array(
+                                                  array('modernizr-1.6.js', 'modernizr-1.6.min.js', TRUE, FALSE),
+                                                  array('jquery-1.4.4.js', 'jquery-1.4.4.min.js', TRUE, FALSE),
+                                                  array('global.js')
+                                                  ),
+                                    'css' => array(
+                                                  array('reset.css', 'all'),
+                                                  array('styles.css', 'all'),
+                                                  array('print.css', 'print'),
+                                                  array('handheld.css', 'handheld')
+                                                  )
+                                    );
+
+// IE6
+$config['groups']['ie6'] = array(
+                                'js'  => array(
+                                              array('ie/DD_belatedPNG_0.0.8a.js', 'ie/DD_belatedPNG_0.0.8a-min.js', TRUE, FALSE),
+                                              array('ie/DD_roundies_0.0.2a.js', 'ie/DD_roundies_0.0.2a-min.js', TRUE, FALSE),
+                                              array('ie/ie6.js')
+                                              ),
+                                'css' => array(
+                                              array('ie/ie6.css', 'all')
+                                              )
+                                );
+// IE7
+$config['groups']['ie7'] = array(
+                                'js'  => array(
+                                              array('ie/DD_roundies_0.0.2a.js', 'ie/DD_roundies_0.0.2a-min.js', TRUE, FALSE),
+                                              array('ie/ie7.js'),
+                                              ),
+                                'css' => array(
+                                              array('ie/ie7.css', 'all')
+                                              )
+                                );
+// IE8
+$config['groups']['ie8'] = array(
+                                'js'  => array(
+                                              array('ie/ie8.js'),
+                                              ),
+                                'css' => array(
+                                              array('ie/ie8.css', 'all')
+                                              )
+                                );
+
+// iOS
+$config['groups']['ios'] = array(
+                                'css' => array(
+                                              array('mobile/iphone.css', 'only screen and (max-device-width: 480px)'),
+                                              array('mobile/ipad.css', 'only screen and (device-width: 768px)'),
+                                              array('mobile/ipad-portrait.css', 'only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)'),
+                                              array('mobile/ipad-landscape.css', 'only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)')
+                                              )
+                                );
 // jQuery (latest, as of 1.xx)
 $config['groups']['jquery'] = array(
 	
@@ -167,7 +222,6 @@ $config['groups']['jqueryui'] = array(
 	
 	)
 );
-
 
 // Ext Core (latest, as of 3.xx)
 $config['groups']['ext-core'] = array(

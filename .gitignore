@@ -7,3 +7,4 @@
 */ci-1.7.3/cache/!index.html
 logs/codeigniter_base.dev-error_log
 logs/
+assets/cache/

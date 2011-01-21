@@ -160,7 +160,17 @@ $config['groups']['main'] = array(
                                                   array('handheld.css', 'handheld')
                                                   )
                                     );
-
+// jQuery Plugins
+$config['groups']['jquery-plugins'] = array(
+                                           'js'  => array(
+                                                         array('jquery/plugin/jquery-ui-1.8.7.min.js', TRUE, FALSE),
+                                                         array('jquery/plugin/jquery.iphoneSwitch.js', 'jquery/plugin/jquery.iphoneSwitch.min.js', TRUE, TRUE),
+                                                         array('jquery/plugin/jquery.radioSwitch.js', 'jquery/plugin/jquery.radioSwitch.min.js', TRUE, TRUE)
+                                                         ),
+                                           'css' => array(
+                                                         array('jquery/theme/ui-aristo/jquery-ui-1.8.7.custom.css')
+                                                         )
+                                           );
 // IE6
 $config['groups']['ie6'] = array(
                                 'js'  => array(

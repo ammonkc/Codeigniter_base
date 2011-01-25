@@ -163,7 +163,7 @@ $config['groups']['main'] = array(
 // jQuery Plugins
 $config['groups']['jquery-plugins'] = array(
                                            'js'  => array(
-                                                         array('jquery/plugin/jquery-ui-1.8.7.min.js', TRUE, FALSE),
+                                                         array('jquery/plugin/jquery-ui-1.8.9.min.js', FALSE, FALSE),
                                                          array('jquery/plugin/jquery.iphoneSwitch.js', 'jquery/plugin/jquery.iphoneSwitch.min.js', TRUE, TRUE),
                                                          array('jquery/plugin/jquery.radioSwitch.js', 'jquery/plugin/jquery.radioSwitch.min.js', TRUE, TRUE)
                                                          ),
@@ -171,6 +171,20 @@ $config['groups']['jquery-plugins'] = array(
                                                          array('jquery/theme/ui-aristo/jquery-ui-1.8.7.custom.css')
                                                          )
                                            );
+// html5 form cross-browser
+// http://net.tutsplus.com/tutorials/html-css-techniques/how-to-build-cross-browser-html5-forms/
+$config['groups']['html5form'] = array(
+                                'js'  => array(
+                                              array('webforms2/webforms2.js', FALSE, FALSE),
+                                              array('jquery/plugin/ui.spinner.js', 'jquery/plugin/ui.spinner.min.js', TRUE, FALSE),
+                                              array('jquery/plugin/jquery.placehold-0.3.js', 'jquery/plugin/jquery.placehold-0.3.min.js', TRUE, FALSE),
+                                              array('ie/html5form.js')
+                                              ),
+                                'css' => array(
+                                              array('jquery/theme/ui-spinner/ui.spinner.css', 'all')
+                                              )
+                                );
+
 // IE6
 $config['groups']['ie6'] = array(
                                 'js'  => array(

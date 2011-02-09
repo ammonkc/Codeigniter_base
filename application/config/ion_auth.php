@@ -127,12 +127,12 @@
 	 * default password, 'password', changes to 
 	 * fbaa5e216d163a02ae630ab1a43372635dd374c0 with default salt.
 	 **/
-	$config['store_salt'] = false;
+	$config['store_salt'] = true;
 	
 	/**
 	 * Message Start Delimiter
 	 **/
-	$config['message_start_delimiter'] = '<p>';
+	$config['message_start_delimiter'] = '<p class="message">';
 	
 	/**
 	 * Message End Delimiter
@@ -142,7 +142,7 @@
 	/**
 	 * Error Start Delimiter
 	 **/
-	$config['error_start_delimiter'] = '<p>';
+	$config['error_start_delimiter'] = '<p class="error">';
 	
 	/**
 	 * Error End Delimiter

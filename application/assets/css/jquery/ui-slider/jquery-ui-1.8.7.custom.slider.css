@@ -1,0 +1,123 @@
+/* @group Slider */
+
+/*
+ * jQuery UI Slider 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ *
+ * Slider
+ ---------------------------------*/
+.ui-slider { 
+	position: absolute; 
+	text-align: left; 
+	background: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	
+}
+.ui-slider .ui-slider-handle { 
+	position: absolute; 
+	z-index: 2; 
+	width: 100%; 
+	height: 10px; 
+	cursor: ns-resize;
+	background: rgba(56, 117, 215, 0.65); 
+	
+}
+.ui-slider .ui-slider-range { 
+	position: absolute; 
+	z-index: 1; 
+	font-size: .7em; 
+	display: block; 
+	border: 0px solid rgba(56, 117, 215, 0.75);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 8px;
+	background-position: 0 0; 
+	overflow: hidden;
+}
+.ui-slider-vertical { 
+	width: 0; 
+	height: 100%; 
+}
+.ui-slider-vertical .ui-slider-handle { 
+	left: 0px; 
+	margin-left: 0; 
+	margin-bottom: -5px; 
+}
+.ui-slider-vertical .ui-slider-range { 
+	left: 0;
+	width: 100%; 
+}
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+/* Component containers
+----------------------------------*/
+.ui-widget { 
+	font-family: Verdana,Arial,sans-serif; 
+	font-size: 1.1em; 
+}
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget-content { 
+	border: none; 
+	background: none; 
+	color: #222222; 
+}
+.ui-widget-content a { color: #222222; }
+.ui-widget-header { 
+	border: 1px solid rgba(56, 117, 215, 0.55); 
+	background: rgba(56, 117, 215, 0.35); 
+	color: #222222; 
+	font-weight: bold; 
+}
+.ui-widget-header a { color: #222222; }
+
+.ui-state-default, .ui-widget-content .ui-state-default { 
+	border: 0; 
+	background: 0;
+	font-weight: normal; 
+	color: #555555; 
+}
+
+.blockType-1 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+	background-color: rgba(56, 117, 215, 0.35);
+}
+.blockType-2 .ui-slider-range.ui-widget-header {
+	border-color: rgba(255, 204, 0, 0.75);
+	background-color: rgba(255, 204, 0, 0.35);
+}
+.blockType-3 .ui-slider-range.ui-widget-header {
+	border-color: rgba(54, 159, 216, 0.75);
+	background-color: rgba(54, 159, 216, 0.45);
+}
+.blockType-4 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+.blockType-5 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+.blockType-6 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+.blockType-7 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+.blockType-8 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+.blockType-9 .ui-slider-range.ui-widget-header {
+	border-color: rgba(180, 41, 96, 0.75);
+	background-color: rgba(180, 41, 96, 0.35);
+}
+.blockType-10 .ui-slider-range.ui-widget-header {
+	border-color: rgba(56, 117, 215, 0.75);
+}
+/* @end */

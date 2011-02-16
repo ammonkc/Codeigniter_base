@@ -22,7 +22,7 @@
  * as this file.
  *
  */
-	$system_path = "/Library/WebServer/Documents/Codeigniter_base/ci-2.0.0";
+	$system_path = "ci-2.0.0";
 
 /*
  *---------------------------------------------------------------
@@ -38,7 +38,7 @@
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = "/Library/WebServer/Documents/Codeigniter_base/application";
+	$application_folder = "application";
 
 /*
  * --------------------------------------------------------------------

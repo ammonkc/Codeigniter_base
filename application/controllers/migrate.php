@@ -1,15 +1,5 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-if ( ! class_exists('MY_Controller'))
-{
-    if ( ! class_exists('CI_Controller'))
-    {
-    	class CI_Controller extends Controller {}
-    }
-	class MY_Controller extends CI_Controller {}
-}
-
-class Migrate extends MY_Controller
+<?php
+class Migrate extends CI_Controller
 {
 	function __construct()
 	{

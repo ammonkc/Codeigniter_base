@@ -9,7 +9,8 @@ if ( ! class_exists('MY_Controller'))
 	class MY_Controller extends CI_Controller {}
 }
 
-class Welcome extends MY_Controller {
+class Welcome extends MY_Controller 
+{
 
 	function __construct()
 	{
